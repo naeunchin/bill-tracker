@@ -9,6 +9,7 @@
 This project is a full-stack web application designed for managing and tracking personal Bill records. The backend is a robust RESTful API built with Java and Spring Boot, utilizing Spring Data JPA for seamless database interactions. The frontend is a modern, responsive Single Page Application (SPA) built with React and scaffolded with Vite, providing an intuitive User Interface for full CRUD (Create, Read, Update, Delete) operations.
 
 ### App Demo
+<img width="1818" height="1080" alt="bill-tracker-demo-gif" src="https://github.com/user-attachments/assets/f0ffef29-a229-4fd9-bcaa-fc242a955145" />
 
 ---
 
