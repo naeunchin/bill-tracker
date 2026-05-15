@@ -73,7 +73,10 @@ public class Bill {
     public static Bill of(Faker faker) {
         Bill currentBill = new Bill();
         currentBill.setPayeeName(faker.company().name());
-        currentBill.setDueDate(LocalDate.now().plusWeeks(2));
+        
+        int randomFutureDays = faker.number().numberBetween(0, 60);
+        currentBill.setDueDate(LocalDate.now().plusDays(randomFutureDays));
+
         currentBill.setPaymentDue(BigDecimal.valueOf(RandomGenerator.getDefault().nextDouble(2, 100)));
         return currentBill;
     }

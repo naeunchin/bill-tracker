@@ -3,6 +3,7 @@ package com.example.demo.initializer;
 import com.example.demo.entity.Bill;
 import com.example.demo.repository.BillRepository;
 import net.datafaker.Faker;
+import java.time.LocalDate;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import java.util.logging.Logger;
@@ -25,8 +26,7 @@ public class BillInitializer implements CommandLineRunner {
         if (billRepository.count() == 0) {
             try {
                 Faker faker = new Faker();
-                // Using real LDAP users (2 ActiveStudent s) so they can be tested via Keycloak
-                String[] usernames = {"nchin1", "j1"};
+                String[] usernames = {"user1", "user2"};
                 Random random = new Random();
 
                 for (int count = 1; count <= 10; count++) {

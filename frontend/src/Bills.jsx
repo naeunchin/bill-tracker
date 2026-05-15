@@ -115,7 +115,7 @@ function Bills() {
 
     return (
         <div className="app-container">
-            <h1>My Bill Tracker</h1>
+            <h1>Manage Bills</h1>
 
             {!isManager && (
                 <div style={{ marginBottom: '20px', textAlign: 'right' }}>

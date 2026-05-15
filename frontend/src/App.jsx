@@ -1,6 +1,5 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import { Navbar, Nav, Container, Button } from 'react-bootstrap';
-import { useEffect } from 'react';
 import './App.css';
 import Home from './Home.jsx';
 import Bills from './Bills.jsx';
@@ -20,7 +19,7 @@ function App() {
                         </Nav>
                         <Nav>
                             <Navbar.Text className="me-3">
-                                Signed in as: User
+                                Signed in as: user1
                             </Navbar.Text>
                         </Nav>
                     </Navbar.Collapse>
