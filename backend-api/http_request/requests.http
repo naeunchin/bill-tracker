@@ -1,0 +1,32 @@
+### 1. GET all Bills
+GET http://localhost:8080/bills
+Accept: application/json
+
+### 2. GET a single Bill by ID (Grabbing Bill #1)
+GET http://localhost:8080/bills/1
+Accept: application/json
+
+### 3. POST a new Bill (Create)
+POST http://localhost:8080/bills
+Content-Type: application/json
+
+{
+  "payeeName": "NAIT",
+  "paymentDue": 85.50,
+  "dueDate": "2026-05-15",
+  "paid": false
+}
+
+### 4. PUT an existing Bill (Update Bill #1)
+PUT http://localhost:8080/bills/1
+Content-Type: application/json
+
+{
+  "payeeName": "Updated Payee Name",
+  "paymentDue": 999.99,
+  "dueDate": "2026-06-01",
+  "paid": true
+}
+
+### 5. DELETE a Bill (Delete Bill #2)
+DELETE http://localhost:8080/bills/2

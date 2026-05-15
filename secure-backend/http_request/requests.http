@@ -1,0 +1,55 @@
+### 1. GET without Token (return 401 Unauthorized)
+GET http://localhost:8080/restapi/bills
+Accept: application/json
+
+
+### 2. Login to Keycloak and Save Token Automatically
+POST http://localhost:8180/realms/dmit2015-realm/protocol/openid-connect/token
+Content-Type: application/x-www-form-urlencoded
+
+client_id=dmit2015-jwt-client&grant_type=password&username=nchin1&password=Password2015
+
+> {%
+    client.global.set("auth_token", response.body.access_token);
+%}
+
+
+### 3. POST (Create a Bill) with Token
+POST http://localhost:8080/restapi/bills
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "payeeName": "IntelliJ Demo Bill",
+  "paymentDue": 150.00,
+  "dueDate": "2026-05-01",
+  "paid": false
+}
+
+> {%
+    client.global.set("bill_id", response.body.id);
+%}
+
+
+### 4. GET all personal bills (return 200 OK)
+GET http://localhost:8080/restapi/bills
+Authorization: Bearer {{auth_token}}
+Accept: application/json
+
+
+### 5. PUT (Update the Bill) with Token
+PUT http://localhost:8080/restapi/bills/{{bill_id}}
+Content-Type: application/json
+Authorization: Bearer {{auth_token}}
+
+{
+  "payeeName": "Bill Updated",
+  "paymentDue": 200.00,
+  "dueDate": "2026-06-01",
+  "paid": true
+}
+
+
+### 6. DELETE the Bill with Token (return 204 No Content)
+DELETE http://localhost:8080/restapi/bills/{{bill_id}}
+Authorization: Bearer {{auth_token}}
