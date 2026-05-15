@@ -1,10 +1,8 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/vr3ST0lz)
-# DMIT2015 Course Project  
-Backend and Frontend Framework Research and Implementation
+# Bill Tracker Application 
 
-## Student Information
-- Name: Na Eun Chin  
-- Section: OE01.1252  
+## Developer Information
+- Name: Na Eun Chin 
+Last updated: May 2026 
 
 ---
 
@@ -289,19 +287,3 @@ const handleLogout = () => {
     keycloak.logout({ redirectUri: window.location.origin });
 };
 ```
----
-
-## Notes / Challenges
-
-* Part 1 challenges: Getting the Vite environment variables to properly load required specific naming conventions (VITE_).  
-* Part 2 challenges: Encountered several CORS and Keycloak configuration issues (e.g., hidden iframe blocking, missing Access-Control-Allow-Origin headers, and IP address lease changes in VMware). Used Google Gemini and online resources (https://medium.com/@samuelgbenga972/security-configuration-in-spring-boot-the-basic-58721727b3dc) to properly configure the Spring Boot SecurityFilterChain and configure the React Keycloak Client to operate as a Public client without a secret.
-
----
-
-## Reflection (Short)
-
-* **What did you learn from this project?** I gained a deep understanding of how token-based authentication separates the concerns of identity management (Keycloak) from resource management (Spring Boot). I also learned how to implement RBAC dynamically in a React frontend to improve user experience.
-* **What would you do differently next time?** I would configure static IP addresses for my VMs earlier in the process to prevent Keycloak connection timeouts when the DHCP lease changes.
-* **Approximate time spent**: ~11-12 hours
-
----
