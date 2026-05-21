@@ -74,3 +74,6 @@ To make this application easily accessible for the audience without requiring th
 ## Image Source
 
 https://www.pexels.com/photo/decorative-illustration-of-money-box-and-arrows-5849585/
+
+© 2026 [Na Eun Chin]. All Rights Reserved.
+This project is for demonstration purposes only as a personal project. Unauthorized copying, modification, or distribution of this codebase is strictly prohibited.
